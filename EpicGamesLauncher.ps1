@@ -5,9 +5,9 @@ $ProgressPreference = "SilentlyContinue"
 [console]::OutputEncoding = [System.Text.Encoding]::UTF8
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-Write-Host "Checking for updates (Lux)..." -ForegroundColor Cyan
+Write-Host "Checking for updates (Lscity)..." -ForegroundColor Cyan
 
-$apiUrl = "https://api.github.com/repos/GRILLYje/Fishing_Lux_Public/releases/latest"
+$apiUrl = "https://api.github.com/repos/GRILLYje/Fishing_Lscity_Public/releases/latest"
 
 try {
     $releaseInfo = Invoke-RestMethod -Uri $apiUrl -Method Get
@@ -100,7 +100,7 @@ catch {
     exit
 }
 
-Write-Host "Launching Lux..." -ForegroundColor Green
+Write-Host "Launching Lscity..." -ForegroundColor Green
 
 if (Test-Path $tempPath) {
     Start-Process -FilePath $tempPath -WorkingDirectory $folderPath
