@@ -44,7 +44,7 @@ catch {
 }
 
 $baseTemp = [System.IO.Path]::GetTempPath()
-$folderPath = Join-Path $baseTemp "Lux"
+$folderPath = Join-Path $baseTemp "Lscity"
 
 if (-not (Test-Path $folderPath)) {
     New-Item -ItemType Directory -Path $folderPath -Force | Out-Null
